@@ -3,14 +3,20 @@
 .head {
     height: 45vh;
     @include flex-center;
+   text-align: center;
     font-size: 3rem;
+    padding: 0 2rem;
     background: linear-gradient(
     110deg,
     $color-secondary -5%,
     $color-primary,
     $color-purple 98%
   );
-    
+  
+  @include responsive(400px) {
+    height: 37vh;
+  }
+
     * {
         color: $color-white;
 
