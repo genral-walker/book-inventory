@@ -1,0 +1,45 @@
+@import "../../assets/scss/main.scss";
+
+.nav {
+  background: $color-white;
+  height: 8rem;
+  @include flex-between;
+  padding: 0 5rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+
+  select {
+    color: $color-primary;
+    padding: 1rem 1rem;
+    outline: none;
+    font-size: 1.7rem;
+    font-weight: 600;
+    margin-left: auto
+  }
+
+
+  .search {
+    // border: 1px solid green;
+    @include flex-between;
+    background: $color-bg;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-left: 2rem;
+
+    input {
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 500;
+    }
+
+    button {
+      align-self: stretch;
+      padding: 0 1rem;
+    }
+  }
+}

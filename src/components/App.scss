@@ -1,0 +1,101 @@
+@import "../assets/scss/main.scss";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  color: $color-primary;
+}
+/* ::selection {
+   background:rgba(252, 229, 55, 0.72);
+ } */
+
+html {
+  ///// MIN WIDTH RULES GOES IN ASCENDING ORDER //////
+  @include responsive(1600px) {
+    font-size: 93.75%;
+  }
+  @include responsive(1800px) {
+    font-size: 100%;
+  }
+
+  font-size: 62.5%;
+
+   ///// MIN WIDTH RULES GOES IN DESCENDING ORDER //////
+  @include responsive(350px) {
+    font-size: 56.25%;
+  }
+}
+
+body {
+  font-family: "Jost", sans-serif;
+  box-sizing: border-box;
+  background: $color-bg;
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+li {
+  list-style: none;
+}
+
+button,
+input,
+textarea,
+select,
+option {
+  border: none;
+  background-color: inherit;
+  color: inherit;
+  cursor: pointer;
+  &:active,
+  &:focus {
+    border: none;
+    outline: none;
+  }
+}
+
+textarea {
+  cursor: text;
+}
+
+// APP
+.app {
+  padding: 5rem 13rem 0 10rem;
+  display: grid;
+  grid-template-columns: 21% 1fr;
+  grid-template-rows: 5rem auto;
+  gap: 2.5rem;
+  @include responsive(1100px) {
+    grid-template-columns: 25% 1fr;
+    padding: 5rem 10rem 0 6rem;
+  }
+  @include responsive(1024px) {
+    padding: 5rem 8rem 0 4rem;
+  }
+  @include responsive(900px) {
+    padding: 5rem 4rem 0 3rem;
+  }
+  @include responsive(900px) {
+    grid-template-columns: 27% 1fr;
+  }
+  @include responsive(700px) {
+    @include flex-column;
+    padding: 5rem 3rem 0;
+   }
+   @include responsive(500px) {
+    padding: 5rem 2rem 0;
+   }
+   @include responsive(375px) {
+    padding: 5rem 1.5rem 0;
+   }
+}
+
+

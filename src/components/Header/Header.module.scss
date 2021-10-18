@@ -1,0 +1,18 @@
+@import "../../assets/scss/main.scss";
+
+.head {
+    height: 45vh;
+    @include flex-center;
+    font-size: 3rem;
+    background: linear-gradient(
+    110deg,
+    $color-secondary -5%,
+    $color-primary,
+    $color-purple 98%
+  );
+    
+    * {
+        color: $color-white;
+
+    }
+}

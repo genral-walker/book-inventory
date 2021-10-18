@@ -1,0 +1,41 @@
+
+@import "../../assets/scss/main.scss";
+
+.btn {
+  border-radius: 10px;
+  background: $color-primary-light;
+  padding: 0.8rem 1.5rem;
+  color: $color-primary;
+  font-size: 1.14rem;
+  font-weight: 700;
+}
+
+.active {
+  color: $color-white;
+  background: $color-primary;
+}
+
+.btnNav {
+  background: $color-purple;
+  color: $color-white;
+  font-weight: 500;
+  border-radius: 6px;
+  margin-left: auto;
+  transition: .5s;
+  @include responsive(500px) {
+    font-size: .9rem;
+   }
+   @include responsive(400px) {
+    font-size: .84rem;
+   }
+   @include responsive(330px) {
+    padding: 0.8rem 1rem;
+   }
+   @include responsive(320px) {
+    padding: 0.8rem;
+   }
+
+  &:active {
+      transform: translateY(3px) scale(.99);
+  }
+}
